@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/login.css">
+  <title>AudioNote</title>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      
+      <header> AudioNote <br> Login</header>
+      
+      <form action="#">
+        <input type="text" placeholder="Enter your username" id="usernameL">
+        <input type="password" placeholder="Enter your password" id="passwordL">
+        <a href="#">Forgot password?</a>
+        <input type="button" class="button" value="Login" onclick="loginUser()">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header> AudioNote <br> Signup</header>
+      <form action="">
+        <input type="text" placeholder="Enter your name" id="name">
+        <input type="text" placeholder="Enter your email" id="email">
+        <input type="text" placeholder="Enter your username" id="username">
+        <input type="password" placeholder="Create a password" id="password">
+        <input type="password" placeholder="Confirm your password" id="confirmPassword">
+        <input type="button" class="button" value="Signup" onclick="registerUser()">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/login.js"></script>
+</html>

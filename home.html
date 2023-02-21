@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>AudioNote</title>
+  </head>
+  <body onload="loadUser()">
+
+    <div id="content">
+
+      <div id="userName"></div>
+
+      <br>
+
+      Voice:
+
+      <select id="voiceSelected">
+        <option value="Joanna">Joanna [US-F]</option>
+        <option value="Kendra">Kendra [US-F]</option>
+        <option value="Matthew">Matthew [US-M]</option>
+        <option value="Justin">Justin [US-M]</option>
+        <option value="Joey">Joey [US-M]</option>
+        <option value="Aditi">Aditi [ZA-F]</option>
+        <option value="Amy">Amy [GB-F]</option>
+        <option value="Emma">Emma [GB-F]</option>
+        <option value="Brian">Brian [GB-M]</option>
+        <option value="Mizuki">Mizuki [Japanese]</option>
+      </select>
+      <input type="text" name="subject" id="subject" placeholder="Subject of Note?">
+      <input type="submit" value="Say it!" id="sayButton" class="buttons">
+      <button style="float: right;" onclick="logOut()" class="buttons">Logout</button>
+      <span id="postIDreturned"></span>
+      </br></br>
+
+      <textarea id ="postText"></textarea>
+      <span id="charCounter">Characters: 0</span> <br> <br>
+      <button onclick="showTranslate()" class="buttons">Need a text to translate?</button>
+      <div id="translator" style="display: none; ">
+        <h4>Text Translator</h4>
+        <form>
+          <textarea name="inputText" id="inputText" cols="10" rows="10" placeholder="Input your Text you want to be translated here" style="width: 50em;"></textarea>
+          <br>
+        </form>
+        <button onclick="translateText()" class="buttons">Translate</button>
+      </div>
+      </br></br> </br></br>
+      <input type="text" id="subjectGet" placeholder="SUBJECT"> <input type="submit" class="buttons" value="Search" id="searchButton" onclick="getPosts()">
+      <br/>
+      <br>
+      
+    </div>
+
+    <table id="posts">
+      <colgroup>
+        <col style="width:10%">
+        <col style="width:7%">
+        <col style="width:45%">
+        <col style="width:8%">
+        <col style="width:30%">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>Post ID</i></th>
+          <th>Voice</i></th>
+          <th>Post</i></th>
+          <th>Status</i></th>
+          <th>Subject</i></th>
+          <th>Player</i></th>
+          <th>actions</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="./js/scripts.js"></script>
+    <!-- <script src="scripts copy.js"></script> -->
+    <script src="./js/login.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+  </body>
+</html>
